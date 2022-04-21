@@ -39,7 +39,7 @@ public class Ex01 {
 		} else if (n3>max) {
 			max = n3;
 		}
-		return max;
+		return max;	// 하나의 변수만 리턴받을 수 있다.(여러개 리턴 불가능)
 	}
 	
 	static void out(int num) {
