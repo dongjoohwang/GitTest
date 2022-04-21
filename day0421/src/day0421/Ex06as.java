@@ -15,8 +15,9 @@ public class Ex06as {
 		int[] arr = new int[n];
 		
 		arr[0] = rd.nextInt(10);
-		
-		for (int i = 1; i < arr.length; i++) {
+			
+		for (int i = 0; i < arr.length; i++) {		// while문이 for문 안에 들어있음 
+													// while문에서 아웃될 경우 for(i)문으로 돌아감
 //			do {
 //				arr[i] = rd.nextInt(10);
 //			} while (arr[i] == arr[i-1]);
@@ -26,14 +27,14 @@ public class Ex06as {
 			do {
 				j=0;
 				arr[i] = rd.nextInt(10);
-				
+				System.out.println(arr[i]);
 				for (j = 0; j < i; j++) {
 					if (arr[j]==arr[i]) {
 						break;
 					}
 				} 
 					
-				} while(j<i);
+				} while(j<i);		// 계속 do문으로 돌아가다가 i와 j의 인덱스 값이 모두 최종값이 될 경우 do를 거쳐서 for문으로 돌아감
 			
 			}
 		

@@ -8,7 +8,7 @@ package day0421;
 //
 
 /*
- * day0421 - ex06as
+ * day0421 - ex07
  * 
  * 		for (int i = 0; i < arr.length; i++) {
 			arr[i] = rd.nextInt(10);
@@ -25,6 +25,34 @@ package day0421;
 			System.out.print(arr[i] + " ");
 		}
 		System.out.println();
+ */
+
+/*
+ * 	day0421 - ex06as
+ * 
+ *  		for (int i = 0 i < arr.length; i++) {	// while문이 for문 안에 들어있음 
+													// while문에서 아웃될 경우 for(i)문으로 돌아감
+ *  
+ * 		 	int j;	// for문용
+ * 
+			do {
+				j=0;
+				arr[i] = rd.nextInt(10);
+				System.out.println(arr[i]);
+				for (j = 0; j < i; j++) {
+					if (arr[j]==arr[i]) {
+						break;
+				}
+			} 
+					
+			} while(j<i);		// 계속 do문으로 돌아가다가 i와 j의 인덱스 값이 모두 최종값이 될 경우 do를 거쳐서 for문으로 돌아감
+			
+			=> 0	1	 2    3    4
+			   5    2 	 2
+			   
+			   i	2
+			   j	0 => 1(중복) => break; => while(j<i)
+			
  */
 
 /*

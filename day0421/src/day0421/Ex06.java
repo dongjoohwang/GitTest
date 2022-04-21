@@ -12,13 +12,12 @@ public class Ex06 {
 		int[] arr = new int[10] ;
 		
 		for (int i = 0; i < arr.length; i++) {
-			arr[i] = rd.nextInt(10);
+			arr[i] = rd.nextInt(10)+1;
 			for (int j = 0; j < i; j++) {
-				if (arr[j]==arr[i]) {
+				if (arr[i]==arr[j]) {
 					i--;
 				}
 			}
-			
 		}
 		for (int i = 0; i < arr.length; i++) {
 			System.out.print(arr[i] + " ");
