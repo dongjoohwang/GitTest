@@ -6,8 +6,9 @@ public class Ex05 {
 	
 	static int[][] mdays = {
 			
-			{31,28,31,30,31,30,31,31,30,31,30,31},	// 평년
-			{31,29,31,30,31,30,31,31,30,31,30,31}	// 윤년
+			// 2헹 12열   /  평년 => i=0 / 윤년 => i=1
+			{31,28,31,30,31,30,31,31,30,31,30,31},	// 평년	0
+			{31,29,31,30,31,30,31,31,30,31,30,31}	// 윤년	1
 	};
 
 	static int isLeap(int year) {	// 평년, 윤년 계산
@@ -18,7 +19,8 @@ public class Ex05 {
 	static int dayOfYear(int year, int month, int day) {
 		int days=day;
 		for (int i = 1; i < month; i++) {
-			days += mdays[isLeap(year)][i-1];
+			days += mdays[isLeap(year)][i-1]; // 윤년, 평년 여부 => 평년이면 0값	/ 0행 0~11열
+//			days += mdays[0][0];	// i:1 => 0행0열 => 31일 / i:2 => 0행1열 => 28일 ...
 		}
 		return days;
 	}

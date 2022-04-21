@@ -8,6 +8,26 @@ package day0421;
 //
 
 /*
+ * day0421 - ex06as
+ * 
+ * 		for (int i = 0; i < arr.length; i++) {
+			arr[i] = rd.nextInt(10);
+			for (int j = 0; j < i; j++) {	**j < i	(length를 넣을 경우 인덱스 -1이 출력되면서 에러 발생)
+				if (arr[j]==arr[i]) {	 i와 j를 비교할 때 중복되는 값이 나오면
+					i--;				i에서 1을 빼준다.(다른 값이 나올 때까지)
+				}
+			}
+			
+		}
+		
+		// 재출력
+		for (int i = 0; i < arr.length; i++) {
+			System.out.print(arr[i] + " ");
+		}
+		System.out.println();
+ */
+
+/*
  * 	day0420 - ex03as
  * 
  *   int fee=2500;
