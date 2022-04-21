@@ -11,7 +11,7 @@ public class Ex04 {
 		
 		for (int i = 0; i < num.length-1; i++) {
 			int id = i;  // id=0
-			for (int j = i+1; j < num.length; j++) { // num[0]을 비교할 필요가 없기 때문에 i+1을
+			for (int j = i; j < num.length; j++) { // num[0]을 비교할 필요가 없기 때문에 i+1을
 													// 시작값으로 설정한다.
 				if (num[id]>num[j])		// j는 num[1]에서 num[4]까지 돈다.
 										// 즉, num[id]는 num[1],[2],[3],[4]까지의 값과 모두 비교하는 것이다.
@@ -24,11 +24,11 @@ public class Ex04 {
 					id=j;				// => num[id] = num[j]
 				
 				}
-				if (id != i) {
+				
 					int tmp = num[id];
 					num[id] = num[i];
 					num[i] = tmp;
-				}
+				
 				
 			
 			System.out.println(i+1+"회전 : " + Arrays.toString(num));

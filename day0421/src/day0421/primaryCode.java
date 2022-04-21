@@ -46,7 +46,7 @@ package day0421;
 	}
 }
 	
-	day0420 - ex04
+	day0420 - ex04  / 선택정렬 (오름차순, 내림차순)
 	
 	for (int i = 0; i < num.length-1; i++) {
 			int id = i;  // id=0
