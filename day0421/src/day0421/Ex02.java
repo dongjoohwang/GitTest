@@ -51,6 +51,14 @@ public class Ex02 {
 			}
 		}
 		System.out.println(max + "," + md + "," + min);
+		
+		if (n1>n2) {
+			if (n2>n3) {
+				max=n1;
+				md=n2;
+				min=n3;
+			}
+		}
 	}
 
 }
