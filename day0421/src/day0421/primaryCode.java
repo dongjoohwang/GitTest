@@ -1,11 +1,89 @@
 package day0421;
 
+import java.util.Scanner;
+
 //import java.util.Arrays;
 
 //import java.util.Scanner;
 
 //# 강의 내용 => 핵심 코드 정리
 //
+
+/*
+ * day0422 - monthcal
+ * 
+ * 		int last=-1;	// 이전 월
+		int ct = 0;
+		
+		- 월(month) 중복 제거
+		do {
+			int month;
+			do {	// 직전 월과 같은 월이면 반복 / 같은 달이 아니면 do~while 벗어남
+				month = (int)(Math.random()*12);
+			} while(month==last);
+			last = month;
+			
+		- 월(month) 입력	
+			while (true) {
+				System.out.println(month);
+				System.out.print((month+1) + "월 : ");
+				String qus = sc.nextLine();
+				
+				if (qus.equals(monthString[month])) break; 	// 정답
+				System.out.println("오답입니다.");
+			}
+			System.out.println(ct +"번째 시도 : " +  "정답입니다. >> 재도전(1) : 종료(0) : ");
+			retry = sc.nextInt();
+			sc.nextLine();
+		} while (retry==1);
+		System.out.println("프로그램 종료");
+ * 
+ */
+
+/*
+ * day0422 - day
+ * 
+ * 		
+ * 		int re=0;
+		Scanner sc = new Scanner(System.in);
+		String[] day = {"일","월","화","수","목","금","토"};
+		String[] eng = {"sunday","monday","tuesday","wednesday",
+		"thursday","friday","saturday"};	// 영어 소문자 인식
+		
+		int last = -1;	// 이전 월
+		
+		// 중복 제거
+		do {
+			int num;
+			do {		// 직전 월과 같은 월이면 반복 / 같은 달이 아니면 while문 벗어남
+				num = (int)(Math.random()*7);
+			} while(num==last);		// 직전 월과 같은 월일 경우 while문을 벗어나지 않는다.
+			last=num;				// 직전 월과 다른 월일 경우 while문을 빠져나온 다음, last값은 num값이 된다.
+			
+			int id = 0;									// 인덱스 값 설정(num이 day[id]에 들어있는 수인지를 알아내기 위함)
+			for (int i = 0; i < day.length; i++) {		// for문으로 num과 day[id]의 모든 값과 비교
+				id = i;									// day[i] = day[id] => 인덱스 i와 id 값을 일치시킨다.
+				if (id==num) {							// num이 id(i)에 들어있는 수일 경우
+					day[id] = day[num];					// day[id]값은 곧 day[num]값이 된다.
+					System.out.print(day[num]+"요일을 영어 소문자로 입력하시오. : ");
+					// num : 0 => day[0(=num)] : 일 .... num : 6 => day[6] : 토
+				}
+			
+				}
+				//  if와 for문을 아예 빠져나온 후 while문에서 입력 값 설정
+				while (true) {		
+					String input = sc.next();
+					if (input.equals(eng[num])) break; 		// input 입력 값이 eng[num]에 들어있는 값과 같을 경우 while문을 바로 빠져나옴
+						System.out.println("오답");			// 오답일 경우 정답을 입력할 때까지 while문을 벗어나지 않음
+					
+				}
+				
+				System.out.println("정답! / 재도전(1), 종료(0)");
+				re = sc.nextInt();	// 1입력할 경우 재도전, 0입력할 경우 반복문 벗어나서 종료
+				sc.nextLine();		// 에러 방지(엔터 제거용)
+			}while (re==1);
+			System.out.println("종료");
+/*
 
 /*
  * day0421 - ex07

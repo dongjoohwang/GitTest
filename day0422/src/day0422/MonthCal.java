@@ -9,6 +9,8 @@ public class MonthCal {
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
 
+		
+		
 		String[] monthString = {
 				"January", "Feburary", "March", "April", "May", "June",
 				"July", "August", "September", "October", "November", "December"
@@ -24,8 +26,8 @@ public class MonthCal {
 			int month;
 			do {	// 직전 월과 같은 월이면 반복 / 같은 달이 아니면 do~while 벗어남
 				month = (int)(Math.random()*12);
-			} while(month==last);
-			last = month;
+			} while(month==last);	// 직전 월과 같은 월일 경우 while문을 벗어나지 않는다.
+			last = month;			// 직전 월과 다른 월일 경우 while문을 빠져나온 다음, last값은 month값이 된다.
 			
 			while (true) {
 				System.out.println(month);
