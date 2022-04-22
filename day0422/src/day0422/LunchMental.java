@@ -23,19 +23,23 @@ public class LunchMental {
 			int as = 0;
 			
 			switch (num) {
-			case 0:
-				as = x+y+z;
+			case 0:	as = x+y+z;
+//				System.out.println(x + " + " + y + " + " + z + " = ");
 				break;
 			case 1:
 				as = x+y-z;				
+//				System.out.println(x + " + " + y + " - " + z + " = ");
 				break;
 			case 2:
 				as = x-y+z;								
+//				System.out.println(x + " - " + y + " + " + z + " = ");
 				break;
-			case 3:				
+			default:				
 				as = x-y-z;								
+//				System.out.println(x + " - " + y + " - " + z + " = ");
 				break;
 			}
+			System.out.println("num : " + num);
 			while (true) {
 				System.out.print( x+( (num<2) ? "+" : "-") +
 								  y + ( (num%2==0) ? "+" : "-") +
