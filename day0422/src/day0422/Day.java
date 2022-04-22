@@ -17,6 +17,8 @@ public class Day {
 		
 		int re=0;
 		int last = -1;
+		int suc = 0;
+		int fail=0;
 		
 		String[] day = {"일","월","화","수","목","금","토"};
 		String[] eng = {"sunday","monday","tuesday",
@@ -40,8 +42,13 @@ public class Day {
 				}
 				while (true) {
 					String input = sc.next();
-					if (input.equals(eng[num])) break;
-						System.out.println("오답");
+					if (input.equals(eng[num])) {
+						suc++;
+						break;
+					} else {
+						fail++;
+						System.out.println("오답입니다. 다시 입력해주세요.");
+					}
 					
 				}
 				
@@ -49,6 +56,8 @@ public class Day {
 				re = sc.nextInt();
 				sc.nextLine();
 			}while (re==1);
+		
+			System.out.println("성공 / 실패 횟수 : " + suc + " , " + fail);
 			System.out.println("종료");
 			
 	}	

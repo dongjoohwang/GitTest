@@ -10,6 +10,20 @@ import java.util.Scanner;
 //
 
 /*
+ * day0423 - dicegame
+ * 
+ * 			while (true) {
+			d1 = rd.nextInt(6)+1;
+			d2 = rd.nextInt(6)+1;
+			
+			System.out.println("("+d1 + "," +d2 +")");
+			if (d1+d2==5) {
+				System.out.println("주사위 두 개의 합이 5가 나왔으므로 게임을 종료합니다.");
+				break;
+			}
+ */
+
+/*
  * day0422 - monthcal
  * 
  * 		int last=-1;	// 이전 월
@@ -73,15 +87,22 @@ import java.util.Scanner;
 				//  if와 for문을 아예 빠져나온 후 while문에서 입력 값 설정
 				while (true) {		
 					String input = sc.next();
-					if (input.equals(eng[num])) break; 		// input 입력 값이 eng[num]에 들어있는 값과 같을 경우 while문을 바로 빠져나옴
-						System.out.println("오답");			// 오답일 경우 정답을 입력할 때까지 while문을 벗어나지 않음
-					
+					if (input.equals(eng[num])) {
+						suc++;							// 성공횟수 카운트
+						break;							// input 입력 값이 eng[num]에 들어있는 값과 같을 경우 while문을 바로 빠져나옴
+					}  else {
+						System.out.println("오답");		// 오답일 경우 정답을 입력할 때까지 while문을 벗어나지 않음
+						fail++;							// 실패횟수 카운트
+					}
+									
 				}
 				
 				System.out.println("정답! / 재도전(1), 종료(0)");
 				re = sc.nextInt();	// 1입력할 경우 재도전, 0입력할 경우 반복문 벗어나서 종료
 				sc.nextLine();		// 에러 방지(엔터 제거용)
 			}while (re==1);
+			
+			System.out.println("성공 / 실패 횟수 : " + suc + " , " + fail);
 			System.out.println("종료");
 /*
 
