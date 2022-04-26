@@ -1,44 +1,36 @@
 package day0426;
 
+import lombok.Getter;
+import lombok.Setter;
+import lombok.ToString;
+
 public class Exer6_5 {
 
 	public static void main(String[] args) {
 		
-		Student2 s = new Student2();
-		s.name = "홍길동";
-		s.ban = 10;
+		Student2 s2 = new Student2("손",1,10,90,100,60);	// 생성자 호출  >>  디폴트 생성자
+		System.out.println(s2.getName());
+		System.out.println(s2.getTotal());
+		System.out.println("========================");
 		
-		System.out.println(s.name);
-		System.out.println(s.ban);
-		System.out.println(s.math);
-		s.getAg();
+		Student2 s3 = new Student2("이",2,9,90,80,70);	// 생성자 호출  >>  디폴트 생성자
+		System.out.println(s3.getName());
+		System.out.println(s3.getTotal());
+		System.out.println("========================");
 		
-		System.out.println("===================");
-		Student2 s2 = new Student2();
-		s2.name = "이순신";
-		s2.kor = 90;
-		s2.eng = 80;
-		s2.math = 90;
-		System.out.println(s2.name);
-		System.out.println(s2.kor);
-		System.out.println(s2.eng);
-		System.out.println(s2.math);
-		System.out.println("총점 : " + s2.getTotal());
-		System.out.println("평균 : " + s2.getAg());
+		Student2 s4 = new Student2("권",2,9);	// 생성자 호출  >>  디폴트 생성자
+		System.out.println(s4.getName());
+		System.out.println(s4.getTotal());
 		
-		System.out.println("===================");
-		Student2 s3 = new Student2();
-		s3 = s;
-		System.out.println(s3.name);
-		System.out.println(s3.ban);
-		System.out.println(s3.math);
-		s.getAg();
 	}
 
 }
 
 // private < default < protected < public
 
+@Getter		// 어노테이션
+@Setter
+@ToString
 class Student2 {
 	// 변수>> 인스턴스, 클래스, 지역
 	
@@ -49,16 +41,31 @@ class Student2 {
 	private int eng;
 	private int math;
 	
-	// 함수(메소드)>> 인스턴스, 클래스
+	// 함수 오버로딩
+	public Student2(String name, int ban, int no, int kor, int eng, int math) {
+		this.name = name;
+		this.ban = ban;
+		this.no = no;
+		this.kor = kor;
+		this.eng = eng;
+		this.math = math;
+	}
+	
+	public Student2(String name, int ban, int no) {
+		this.name = name;
+		this.ban = ban;
+		this.no = no;
+	}
 	
 	int getTotal() {
 		int sum = kor+eng+math;
 		return sum;
 	}
-	
+
 	double getAg() {
 		return getTotal()/3.0;
 	}
+
 }
 
 
