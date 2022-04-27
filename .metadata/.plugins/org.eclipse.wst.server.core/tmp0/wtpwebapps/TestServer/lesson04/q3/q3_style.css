@@ -1,0 +1,16 @@
+@charset "UTF-8";
+a {text-decoration: none;}
+a:hover {text-decoration: none;}
+
+#wrap {width: 1200px; margin: none;}
+header {height: 100px;}
+nav {height: 100px;}
+.contents {height: 450px;}
+.conetnts .one {width: 400px;}
+.conetnts .two {width: 400px;}
+.conetnts .three {width: 400px;}
+.contents2 {height: 450px;}
+.conetnts2 .one {width: 400px;}
+.conetnts2 .two {width: 400px;}
+.conetnts2 .three {width: 400px;}
+footer {height: 100px;}

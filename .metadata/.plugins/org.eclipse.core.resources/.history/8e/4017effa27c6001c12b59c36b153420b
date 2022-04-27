@@ -1,0 +1,95 @@
+package day0427;
+
+public class CarTest2 {
+
+	public static void main(String[] args) {
+		Sedan se = new Sedan("white",5,4);
+		System.out.println(se.color + ", " + se.passenger + ", " + se.tire);	// 3
+		se.run();		// run	// 4
+		
+		System.out.println("=================");
+		Bus bs = new Bus();
+		bs.passenger = 15;
+		bs.tire = 6;
+		System.out.println(bs.passenger + ", " + bs.tire);		// 6
+	
+		System.out.println("=================");
+		Sports sp = new Sports(2,4,2,"white",400);
+		System.out.println(sp.passenger + ", " +  sp.tire + ", " 
+		+ sp.seat + ", " + sp.color + ", " + sp.sports);
+		
+	}
+
+}
+
+@ToString
+class Sedan2 extends Cars {
+	
+	String color;
+	
+	public Sedan2(String color, int passenger, int tire) {
+		super(passenger,tire,4);
+		this.color = color;
+		System.out.println("Sedan() 생성자");
+	}
+
+//	public Sedan2(int passenger,)
+	
+	public Sedan2() {};
+}
+
+class Sports2 extends Sedan{
+
+	 int sports;
+	 
+	
+}
+
+//@ToString
+class Cars2 {
+	int passenger;
+	int tire;
+	int seat;
+	
+	public Cars2(int passenger,int tire,int seat) {
+		this.passenger = passenger;
+		this.tire = tire;
+		this.seat = seat;
+		System.out.println("cars() 생성자");	
+	}
+	
+	public Cars2() {};
+	
+	void run() {
+		System.out.println("run()");
+	}
+	void stop() {}
+	
+}
+
+//@ToString
+class Bus2 extends Cars {
+	
+	void passengerLoad() {}
+}
+
+//@ToString
+class Truck2 extends Cars {
+	
+	void objectLoad() {}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
