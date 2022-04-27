@@ -1,5 +1,3 @@
-package day0427;
-
 import lombok.ToString;
 
 public class CarTest {
