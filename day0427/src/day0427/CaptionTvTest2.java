@@ -7,24 +7,26 @@ class Tv2 {
 	private boolean power;
 	private int channel;
 	
-	public Tv2() {}
-	
-	public Tv2(int channel) {
+//	public Tv2() {
+//		this(false,0);
+//	}
+//	
+//	public Tv2(int channel) {
+//		this(false,channel);
+//	}
+//	
+	public Tv2(int channel, boolean power) {
 		this.channel = channel;
-	}
-	
-	public Tv2(boolean power, int channel) {
 		this.power = power;
-		this.channel = channel;
 	}
 	
 	int getChannel() {
 		return channel;
 	}
 
-	boolean getPower() {
-		return power;
-	}
+//	boolean getPower() {
+//		return power;
+//	}
 	
 	void power() {
 		power = !power;
@@ -39,15 +41,16 @@ class Tv2 {
 	class CaptionTv2 extends Tv2 {
 		private boolean caption;
 				
-		public CaptionTv2() {}
-		
+//		public CaptionTv2() {
+//			this(false,0,false);
+//		}
+//		
 		public CaptionTv2(int channel, boolean caption) {
-			super(channel);
-			this.caption = caption;
+			this(false,channel,caption);
 		}	
 		
 		public CaptionTv2(boolean power, int channel, boolean caption) {
-			super(power, channel);
+			super(channel, power);
 			this.caption = caption;
 		}
 		

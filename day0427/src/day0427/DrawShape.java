@@ -56,6 +56,7 @@ class Circle extends Shape {
 
 		System.out.printf("[center=(%d, %d) , r=%d, color=%s]%n",
 				center.x, center.y, r, color);
+		// [center=(150, 150) , r=50, color=black]
 	}
 }
 
@@ -66,10 +67,12 @@ class Triangle extends Shape {
 		this.p = p;
 	}
 	
+	@Override // 상위클래스 메소드 오버라이딩
 	void draw() {
 
 		System.out.printf("[p1=%s, p2=%s, p3=%s, color=%s]%n",
 				p[0].getXY(), p[1].getXY(), p[2].getXY(), color);
+		// [p1=(100,100), p2=(140,50), p3=(200,100), color=black]
 	}
 }
 

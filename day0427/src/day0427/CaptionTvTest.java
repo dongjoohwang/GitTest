@@ -3,25 +3,27 @@ package day0427;
 import lombok.Getter;
 import lombok.Setter;
 
+@Getter
+@Setter
 class Tv {
 	private boolean power;
 	private int channel;
 	
-	public boolean isPower() {
-		return power;
-	}
-	
-	public void setPower(boolean power) {
-		this.power = power;
-	}
-	
-	public int getChannel() {
-		return channel;
-	}
-	
-	public void setChannel(int channel) {
-		this.channel = channel;
-	}
+//	public boolean isPower() {
+//		return power;
+//	}
+//	
+//	public void setPower(boolean power) {
+//		this.power = power;
+//	}
+//	
+//	public int getChannel() {
+//		return channel;
+//	}
+//	
+//	public void setChannel(int channel) {
+//		this.channel = channel;
+//	}
 	
 	void power() {
 		power = !power;
@@ -33,16 +35,19 @@ class Tv {
 		--channel;
 	}
 }
+
+@Getter
+@Setter
 	class CaptionTv extends Tv {
 		private boolean caption;
 				
-		public boolean isCaption() {
-			return caption;
-		}
-
-		public void setCaption(boolean caption) {
-			this.caption = caption;
-		}
+//		public boolean isCaption() {
+//			return caption;
+//		}
+//
+//		public void setCaption(boolean caption) {
+//			this.caption = caption;
+//		}
 
 		void displayCaption(String text) {
 			if (caption) {
