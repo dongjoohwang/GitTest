@@ -1,0 +1,50 @@
+package day0427;
+
+import day0427.Tv.CaptionTv;
+import lombok.Getter;
+import lombok.Setter;
+
+class Caption {
+
+	public static void main(String[] args) {
+		
+		CaptionTv ct = new CaptionTv();
+	}
+
+}
+
+@Getter
+@Setter
+class Tv {
+	private boolean power;
+	private int channel;
+	
+	void power() {
+		power = !power;
+	} 
+	void channelUp() {
+		++channel;
+	}
+	void channelDown() {
+		--channel;
+	}
+	
+	class CaptionTv extends Tv {
+		private boolean caption;
+		void displayCaption(String text) {
+			if (caption) {
+				System.out.println(text);
+			}
+		}
+	}
+}
+
+
+
+
+
+
+
+
+
+

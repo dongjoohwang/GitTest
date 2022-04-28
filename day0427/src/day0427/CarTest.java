@@ -1,7 +1,11 @@
 package day0427;
 
+import lombok.Getter;
+import lombok.Setter;
 import lombok.ToString;
 
+@Getter
+@Setter
 public class CarTest {
 	public static void main(String[] args) {
 		

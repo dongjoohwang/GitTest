@@ -9,4 +9,8 @@
     <fullyQualifiedTypeName name="java.sql.ResultSet"/>
     <fullyQualifiedTypeName name="com.test.common.MysqlService"/>
     <fullyQualifiedTypeName name="java.lang.String"/>
+    <fullyQualifiedTypeName name="day0427.Shape"/>
+    <fullyQualifiedTypeName name="day0427.Triangle"/>
+    <fullyQualifiedTypeName name="day0427.Circle"/>
+    <fullyQualifiedTypeName name="day0427.Point"/>
 </qualifiedTypeNameHistroy>

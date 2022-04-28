@@ -1,0 +1,38 @@
+package day0427;
+
+class Tv {
+	private boolean power;
+	private int channel;
+	
+	void power() {
+		power = !power;
+	} 
+	void channelUp() {
+		++channel;
+	}
+	void channelDown() {
+		--channel;
+	}
+	
+	
+}
+
+class Caption {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}
+
+
+
+
+
+
+
+
+
+
+

@@ -41,3 +41,12 @@ class BlockTest {
 		System.out.println(bt3.a);
 	}
 }
+
+
+
+
+
+
+
+
+
