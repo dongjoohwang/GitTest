@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
-    <fullyQualifiedTypeName name="java.util.Date"/>
     <fullyQualifiedTypeName name="javax.servlet.Filter"/>
     <fullyQualifiedTypeName name="java.io.PrintWriter"/>
     <fullyQualifiedTypeName name="java.sql.Statement"/>
@@ -13,4 +12,37 @@
     <fullyQualifiedTypeName name="day0427.Triangle"/>
     <fullyQualifiedTypeName name="day0427.Circle"/>
     <fullyQualifiedTypeName name="day0427.Point"/>
+    <fullyQualifiedTypeName name="day0427.Caption"/>
+    <fullyQualifiedTypeName name="day0427.Tv.CaptionTv"/>
+    <fullyQualifiedTypeName name="day0427.CaptionTv2"/>
+    <fullyQualifiedTypeName name="lombok.Getter"/>
+    <fullyQualifiedTypeName name="lombok.Setter"/>
+    <fullyQualifiedTypeName name="java.util.Date"/>
+    <fullyQualifiedTypeName name="java.text.SimpleDateFormat"/>
+    <fullyQualifiedTypeName name="day0427.Test"/>
+    <fullyQualifiedTypeName name="java.lang.Override"/>
+    <fullyQualifiedTypeName name="zoo.Duck"/>
+    <fullyQualifiedTypeName name="zoo.Cat"/>
+    <fullyQualifiedTypeName name="java.sql.Time"/>
+    <fullyQualifiedTypeName name="java.lang.Object"/>
+    <fullyQualifiedTypeName name="Mammal"/>
+    <fullyQualifiedTypeName name="Birds"/>
+    <fullyQualifiedTypeName name="Penguin"/>
+    <fullyQualifiedTypeName name="Sparrow"/>
+    <fullyQualifiedTypeName name="Person"/>
+    <fullyQualifiedTypeName name="Bird"/>
+    <fullyQualifiedTypeName name="animal3"/>
+    <fullyQualifiedTypeName name="Mammal4"/>
+    <fullyQualifiedTypeName name="animal4"/>
+    <fullyQualifiedTypeName name="animal"/>
+    <fullyQualifiedTypeName name="Sparrow4"/>
+    <fullyQualifiedTypeName name="java.awt.Robot"/>
+    <fullyQualifiedTypeName name="Robot"/>
+    <fullyQualifiedTypeName name="DanceRobot"/>
+    <fullyQualifiedTypeName name="SingRobot"/>
+    <fullyQualifiedTypeName name="DrawRobot"/>
+    <fullyQualifiedTypeName name="Ex7_18"/>
+    <fullyQualifiedTypeName name="Computer"/>
+    <fullyQualifiedTypeName name="Audio"/>
+    <fullyQualifiedTypeName name="Product"/>
 </qualifiedTypeNameHistroy>
