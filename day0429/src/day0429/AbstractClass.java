@@ -41,7 +41,7 @@ class Tv extends Product {
 		System.out.println("Tv");
 	}
 	
-	}
+}
 	
 class Computer extends Product {
 		
@@ -54,7 +54,7 @@ class Computer extends Product {
 		System.out.println("Computer");	
 	}
 	
-	}
+}
 	
 class Audio extends Product {
 	Audio() { super(50); }

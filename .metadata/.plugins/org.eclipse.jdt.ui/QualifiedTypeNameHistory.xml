@@ -24,7 +24,6 @@
     <fullyQualifiedTypeName name="zoo.Duck"/>
     <fullyQualifiedTypeName name="zoo.Cat"/>
     <fullyQualifiedTypeName name="java.sql.Time"/>
-    <fullyQualifiedTypeName name="java.lang.Object"/>
     <fullyQualifiedTypeName name="Mammal"/>
     <fullyQualifiedTypeName name="Birds"/>
     <fullyQualifiedTypeName name="Penguin"/>
@@ -45,4 +44,11 @@
     <fullyQualifiedTypeName name="Computer"/>
     <fullyQualifiedTypeName name="Audio"/>
     <fullyQualifiedTypeName name="Product"/>
+    <fullyQualifiedTypeName name="java.lang.System"/>
+    <fullyQualifiedTypeName name="java.util.Arrays"/>
+    <fullyQualifiedTypeName name="day0429.Product"/>
+    <fullyQualifiedTypeName name="java.lang.Object"/>
+    <fullyQualifiedTypeName name="day0429.Circle"/>
+    <fullyQualifiedTypeName name="day0429.Shape"/>
+    <fullyQualifiedTypeName name="day0429.Rectangle"/>
 </qualifiedTypeNameHistroy>
