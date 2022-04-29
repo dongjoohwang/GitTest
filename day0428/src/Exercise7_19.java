@@ -42,6 +42,7 @@ class Exercise7_19 {
 			return;
 		}
 		money -= p.price;
+//		System.out.println("money : " + money + "," + p.price);
 		add(p);
 	}
 
@@ -84,8 +85,8 @@ class Exercise7_19 {
 
 		}
 		System.out.println("구입한 물건 : " + Arrays.toString(cart));
-		System.out.println(sum);
-		System.out.println(money);
+		System.out.println("사용 금액 : " + sum);
+		System.out.println("잔액 : " + money);
 		} // summary()
 	}
 	
