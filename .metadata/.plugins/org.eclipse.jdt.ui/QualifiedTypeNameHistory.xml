@@ -7,7 +7,6 @@
     <fullyQualifiedTypeName name="javax.servlet.http.HttpServletResponse"/>
     <fullyQualifiedTypeName name="java.sql.ResultSet"/>
     <fullyQualifiedTypeName name="com.test.common.MysqlService"/>
-    <fullyQualifiedTypeName name="java.lang.String"/>
     <fullyQualifiedTypeName name="day0427.Shape"/>
     <fullyQualifiedTypeName name="day0427.Triangle"/>
     <fullyQualifiedTypeName name="day0427.Circle"/>
@@ -51,4 +50,9 @@
     <fullyQualifiedTypeName name="day0429.Circle"/>
     <fullyQualifiedTypeName name="day0429.Shape"/>
     <fullyQualifiedTypeName name="day0429.Rectangle"/>
+    <fullyQualifiedTypeName name="org.jsoup.select.Elements"/>
+    <fullyQualifiedTypeName name="org.jsoup.nodes.Element"/>
+    <fullyQualifiedTypeName name="java.lang.String"/>
+    <fullyQualifiedTypeName name="org.jsoup.Jsoup"/>
+    <fullyQualifiedTypeName name="org.jsoup.nodes.Document"/>
 </qualifiedTypeNameHistroy>
