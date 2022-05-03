@@ -1,9 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
-    <fullyQualifiedTypeName name="javax.servlet.Filter"/>
-    <fullyQualifiedTypeName name="java.io.PrintWriter"/>
-    <fullyQualifiedTypeName name="java.sql.Statement"/>
-    <fullyQualifiedTypeName name="javax.servlet.http.HttpServletRequest"/>
     <fullyQualifiedTypeName name="javax.servlet.http.HttpServletResponse"/>
     <fullyQualifiedTypeName name="java.sql.ResultSet"/>
     <fullyQualifiedTypeName name="com.test.common.MysqlService"/>
@@ -19,7 +15,6 @@
     <fullyQualifiedTypeName name="java.util.Date"/>
     <fullyQualifiedTypeName name="java.text.SimpleDateFormat"/>
     <fullyQualifiedTypeName name="day0427.Test"/>
-    <fullyQualifiedTypeName name="java.lang.Override"/>
     <fullyQualifiedTypeName name="zoo.Duck"/>
     <fullyQualifiedTypeName name="zoo.Cat"/>
     <fullyQualifiedTypeName name="java.sql.Time"/>
@@ -55,4 +50,14 @@
     <fullyQualifiedTypeName name="java.lang.String"/>
     <fullyQualifiedTypeName name="org.jsoup.Jsoup"/>
     <fullyQualifiedTypeName name="org.jsoup.nodes.Document"/>
+    <fullyQualifiedTypeName name="day0503.Unit"/>
+    <fullyQualifiedTypeName name="java.lang.Override"/>
+    <fullyQualifiedTypeName name="com.tv.IVCR"/>
+    <fullyQualifiedTypeName name="com.tv.VCR"/>
+    <fullyQualifiedTypeName name="com.tv.TVCR"/>
+    <fullyQualifiedTypeName name="SamsungLG.SamsungTv"/>
+    <fullyQualifiedTypeName name="SamsungLG.LGTV"/>
+    <fullyQualifiedTypeName name="LGSamsung.SamsungTv"/>
+    <fullyQualifiedTypeName name="LGSamsung.LGTV"/>
+    <fullyQualifiedTypeName name="LGSamsung.BeanFactory"/>
 </qualifiedTypeNameHistroy>
