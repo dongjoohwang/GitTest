@@ -1,4 +1,4 @@
-package com.ezen;
+package com.ezen01;
 
 /*
  * 상위클래스는 하위클래스를 참조할 수 있으나,
@@ -10,7 +10,18 @@ package com.ezen;
 public class Test04 {
 
 	public static void main(String[] args) {
-		Object obj = new B(new F());
+		Object obj = new B(10);	// 10
+		
+		int i = 5;
+		Integer io = 7;		// 박싱 new integer(7)
+		
+//		int sum = io.intValue()+5;   // 언박싱 io.intvalue() + 5
+		int sum = io+5;	
+		
+//		ob = new D();
+//		ob = new F();
+//		
+		
 		
 //		A a = new C();
 //		C c = (C)a;
@@ -36,7 +47,7 @@ class A {
 class B extends A {
 	int b;
 	public B(Object o) {	// 객체만 집어넣을 것
-		if(o instanceof D) {
+		if(o instanceof D) {	// 캐스팅 에러 방지(참조 선언)
 		D dd = (D)o;
 		dd.d = 10;
 		} else if(o instanceof F) {

@@ -4,7 +4,7 @@ public class ShollowCopy {
 
 	public static void main(String[] args) throws CloneNotSupportedException {
 		
-		Rectangle org = new Rectangle(1, 1, 8, 8);
+		Rectangle org = new Rectangle(0, 0, 0, 0);
 		Rectangle cpy;
 		
 		cpy = (Rectangle) org.clone();
@@ -35,7 +35,12 @@ class Rectangle implements Cloneable {
 	
 	@Override
 	protected Object clone() throws CloneNotSupportedException {
-		return super.clone();
+		Rectangle copy = (Rectangle) super.clone();
+		
+		copy.upperLeft = (Point2) upperLeft.clone();
+		copy.lowerRight = (Point2) lowerRight.clone();
+		
+		return copy;
 	}
 	
 	public void showPosition() {	//  사각형 좌표 출력
