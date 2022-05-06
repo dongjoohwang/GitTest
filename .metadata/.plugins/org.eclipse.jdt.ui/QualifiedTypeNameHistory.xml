@@ -1,19 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
-    <fullyQualifiedTypeName name="javax.servlet.http.HttpServletResponse"/>
-    <fullyQualifiedTypeName name="java.sql.ResultSet"/>
-    <fullyQualifiedTypeName name="com.test.common.MysqlService"/>
-    <fullyQualifiedTypeName name="day0427.Shape"/>
-    <fullyQualifiedTypeName name="day0427.Triangle"/>
-    <fullyQualifiedTypeName name="day0427.Circle"/>
-    <fullyQualifiedTypeName name="day0427.Point"/>
-    <fullyQualifiedTypeName name="day0427.Caption"/>
-    <fullyQualifiedTypeName name="day0427.Tv.CaptionTv"/>
-    <fullyQualifiedTypeName name="day0427.CaptionTv2"/>
-    <fullyQualifiedTypeName name="lombok.Getter"/>
-    <fullyQualifiedTypeName name="lombok.Setter"/>
-    <fullyQualifiedTypeName name="java.util.Date"/>
-    <fullyQualifiedTypeName name="java.text.SimpleDateFormat"/>
     <fullyQualifiedTypeName name="day0427.Test"/>
     <fullyQualifiedTypeName name="zoo.Duck"/>
     <fullyQualifiedTypeName name="zoo.Cat"/>
@@ -38,16 +24,13 @@
     <fullyQualifiedTypeName name="Computer"/>
     <fullyQualifiedTypeName name="Audio"/>
     <fullyQualifiedTypeName name="Product"/>
-    <fullyQualifiedTypeName name="java.lang.System"/>
     <fullyQualifiedTypeName name="java.util.Arrays"/>
     <fullyQualifiedTypeName name="day0429.Product"/>
-    <fullyQualifiedTypeName name="java.lang.Object"/>
     <fullyQualifiedTypeName name="day0429.Circle"/>
     <fullyQualifiedTypeName name="day0429.Shape"/>
     <fullyQualifiedTypeName name="day0429.Rectangle"/>
     <fullyQualifiedTypeName name="org.jsoup.select.Elements"/>
     <fullyQualifiedTypeName name="org.jsoup.nodes.Element"/>
-    <fullyQualifiedTypeName name="java.lang.String"/>
     <fullyQualifiedTypeName name="org.jsoup.Jsoup"/>
     <fullyQualifiedTypeName name="org.jsoup.nodes.Document"/>
     <fullyQualifiedTypeName name="day0503.Unit"/>
@@ -60,4 +43,21 @@
     <fullyQualifiedTypeName name="LGSamsung.SamsungTv"/>
     <fullyQualifiedTypeName name="LGSamsung.LGTV"/>
     <fullyQualifiedTypeName name="LGSamsung.BeanFactory"/>
+    <fullyQualifiedTypeName name="java.util.InputMismatchException"/>
+    <fullyQualifiedTypeName name="ezen.ReadAgeException"/>
+    <fullyQualifiedTypeName name="java.util.Scanner"/>
+    <fullyQualifiedTypeName name="java.lang.System"/>
+    <fullyQualifiedTypeName name="java.lang.Exception"/>
+    <fullyQualifiedTypeName name="com.sun.jdi.Value"/>
+    <fullyQualifiedTypeName name="ezen.EqualEx1.Value"/>
+    <fullyQualifiedTypeName name="ezen.Value"/>
+    <fullyQualifiedTypeName name="ezen.HashSetTest"/>
+    <fullyQualifiedTypeName name="java.util.HashSet"/>
+    <fullyQualifiedTypeName name="java.lang.String"/>
+    <fullyQualifiedTypeName name="ezen.Card"/>
+    <fullyQualifiedTypeName name="java.lang.Object"/>
+    <fullyQualifiedTypeName name="java.lang.CloneNotSupportedException"/>
+    <fullyQualifiedTypeName name="ezen.Point"/>
+    <fullyQualifiedTypeName name="ezen.Rectangle"/>
+    <fullyQualifiedTypeName name="java.lang.Cloneable"/>
 </qualifiedTypeNameHistroy>
