@@ -1,14 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
-    <fullyQualifiedTypeName name="day0427.Test"/>
-    <fullyQualifiedTypeName name="zoo.Duck"/>
-    <fullyQualifiedTypeName name="zoo.Cat"/>
-    <fullyQualifiedTypeName name="java.sql.Time"/>
-    <fullyQualifiedTypeName name="Mammal"/>
-    <fullyQualifiedTypeName name="Birds"/>
-    <fullyQualifiedTypeName name="Penguin"/>
-    <fullyQualifiedTypeName name="Sparrow"/>
-    <fullyQualifiedTypeName name="Person"/>
     <fullyQualifiedTypeName name="Bird"/>
     <fullyQualifiedTypeName name="animal3"/>
     <fullyQualifiedTypeName name="Mammal4"/>
@@ -34,7 +25,6 @@
     <fullyQualifiedTypeName name="org.jsoup.Jsoup"/>
     <fullyQualifiedTypeName name="org.jsoup.nodes.Document"/>
     <fullyQualifiedTypeName name="day0503.Unit"/>
-    <fullyQualifiedTypeName name="java.lang.Override"/>
     <fullyQualifiedTypeName name="com.tv.IVCR"/>
     <fullyQualifiedTypeName name="com.tv.VCR"/>
     <fullyQualifiedTypeName name="com.tv.TVCR"/>
@@ -47,17 +37,27 @@
     <fullyQualifiedTypeName name="ezen.ReadAgeException"/>
     <fullyQualifiedTypeName name="java.util.Scanner"/>
     <fullyQualifiedTypeName name="java.lang.System"/>
-    <fullyQualifiedTypeName name="java.lang.Exception"/>
     <fullyQualifiedTypeName name="com.sun.jdi.Value"/>
     <fullyQualifiedTypeName name="ezen.EqualEx1.Value"/>
     <fullyQualifiedTypeName name="ezen.Value"/>
     <fullyQualifiedTypeName name="ezen.HashSetTest"/>
     <fullyQualifiedTypeName name="java.util.HashSet"/>
-    <fullyQualifiedTypeName name="java.lang.String"/>
     <fullyQualifiedTypeName name="ezen.Card"/>
-    <fullyQualifiedTypeName name="java.lang.Object"/>
     <fullyQualifiedTypeName name="java.lang.CloneNotSupportedException"/>
     <fullyQualifiedTypeName name="ezen.Point"/>
-    <fullyQualifiedTypeName name="ezen.Rectangle"/>
     <fullyQualifiedTypeName name="java.lang.Cloneable"/>
+    <fullyQualifiedTypeName name="com.ezen.AA"/>
+    <fullyQualifiedTypeName name="com.ezen.BB"/>
+    <fullyQualifiedTypeName name="java.lang.Object"/>
+    <fullyQualifiedTypeName name="ezen.Rectangle"/>
+    <fullyQualifiedTypeName name="java.lang.Override"/>
+    <fullyQualifiedTypeName name="java.lang.Exception"/>
+    <fullyQualifiedTypeName name="java.lang.Class"/>
+    <fullyQualifiedTypeName name="java.lang.StringBuffer"/>
+    <fullyQualifiedTypeName name="java.lang.StringBuilder"/>
+    <fullyQualifiedTypeName name="java.lang.String"/>
+    <fullyQualifiedTypeName name="java.lang.Runnable"/>
+    <fullyQualifiedTypeName name="java.lang.Thread"/>
+    <fullyQualifiedTypeName name="java.lang.Integer"/>
+    <fullyQualifiedTypeName name="java.util.StringTokenizer"/>
 </qualifiedTypeNameHistroy>
