@@ -61,11 +61,11 @@ class CaptionTvTest {
 	public static void main(String[] args) {
 		
 		CaptionTv tv = new CaptionTv();
-		tv.setChannel(10);
-		tv.channelUp();
-		System.out.println(tv.getChannel());
-		tv.setCaption(true);
-		tv.displayCaption("hello world");
+//		tv.setChannel(10);
+//		tv.channelUp();
+//		System.out.println(tv.getChannel());
+//		tv.setCaption(true);
+//		tv.displayCaption("hello world");
 	}
 
 }
