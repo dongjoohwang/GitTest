@@ -27,6 +27,7 @@ public class Database {
 	public void getConnection() {
 		try {
 			con = DriverManager.getConnection(URL, "root", "woojoo69"); //경로, 아이디, 비번
+			System.out.println("연결 성공");
 		}catch(Exception e) {
 			e.printStackTrace();
 		}
@@ -206,3 +207,9 @@ public class Database {
 	}
 
 }
+
+
+
+
+
+

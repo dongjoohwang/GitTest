@@ -22,7 +22,7 @@ public class naverTest {
 		//System.out.println(doc);
 		Elements elements = doc.getElementsByAttributeValue("class", "list_body newsflash_body");
 		System.out.println(elements.get(0));
-		//844 4429 8278
+	
 		Element element = elements.get(0);
 		Elements photoElements = element.getElementsByAttributeValue("class", "photo");
 //		System.out.println(photoElements);

@@ -1,15 +1,26 @@
 package day0512;
 
+import java.util.Comparator;
 import java.util.Iterator;
 import java.util.Set;
 import java.util.TreeMap;
+
+class Agedes implements Comparator<Integer> {
+
+	@Override
+	public int compare(Integer o1, Integer o2) {
+		
+		return o2-o1;
+	}
+	
+}
 
 public class Hashmap01 {
 
 	public static void main(String[] args) {
 		
-//		HashMap<Integer, String> map = new HashMap<Integer, String>();		// 정렬 x
-		TreeMap<Integer, String> map = new TreeMap<Integer, String>();		// 정렬 o
+//		HashMap<Integer, String> map = new HashMap<Integer, String>();		// 정렬 x, 중복 x
+		TreeMap<Integer, String> map = new TreeMap<Integer, String>(new Agedes());	// 정렬 o, 중복 x
 		
 		map.put(6, "kim");
 		map.put(3, "kim");
