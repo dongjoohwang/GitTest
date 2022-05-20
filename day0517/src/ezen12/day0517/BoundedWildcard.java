@@ -32,7 +32,7 @@ class Boxhandler {											// box 전달 대상은 Toy, Robot 가능
 	public static void outBox(Box<? extends Toy> box) {		// box에 전달 가능한 인스턴스는 Toy 또는 Toy 상속한 아이들(+get만 가능)
 		Toy t = box.getOb();		// box >> Box<Toy> or Box<Robot>
 		System.out.println(t);
-		box.setOb(new Toy());	// Toy
+//		box.setOb(new Toy());	// Toy
 		
 		// The method setOb(capture#2-of ? extends Toy) 
 		// in the type Box<capture#2-of ? extends Toy> is not applicable for the arguments (Toy)
@@ -44,8 +44,8 @@ class Boxhandler {											// box 전달 대상은 Toy, Robot 가능
 	
 	public static void inBox(Box<? super Toy> box, Toy t) {		// box 대상은 Toy, Object
 		box.setOb(t);	// Object
-		
-		Toy t2 = box.getOb();	// Object 타입 => Toy에 넣을 수 없음
+//		
+//		Toy t2 = box.getOb();	// Object 타입 => Toy에 넣을 수 없음
 //		System.out.println();
 	}
 }
