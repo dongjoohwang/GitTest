@@ -60,7 +60,7 @@
          APR (HTTP/AJP) Connector: /docs/apr.html
          Define a non-SSL/TLS HTTP/1.1 Connector on port 8080
     -->
-    <Connector connectionTimeout="20000" port="8181" protocol="HTTP/1.1" redirectPort="8443"/>
+    <Connector URIEncoding="UTF-8" connectionTimeout="20000" port="8181" protocol="HTTP/1.1" redirectPort="8443"/>
     <!-- A "Connector" using the shared thread pool-->
     <!--
     <Connector executor="tomcatThreadPool"
@@ -153,7 +153,8 @@
              Note: The pattern used is equivalent to using pattern="common" -->
         <Valve className="org.apache.catalina.valves.AccessLogValve" directory="logs" pattern="%h %l %u %t &quot;%r&quot; %s %b" prefix="localhost_access_log" suffix=".txt"/>
 
-      <Context docBase="day0502" path="/day0502" reloadable="true" source="org.eclipse.jst.jee.server:day0502"/><Context docBase="HtmlTest" path="/" reloadable="true" source="org.eclipse.jst.jee.server:HtmlTest"/><Context docBase="day0509_2" path="/day0509_2" reloadable="true" source="org.eclipse.jst.jee.server:day0509_2"/><Context docBase="day0510_2" path="/day0510_2" reloadable="true" source="org.eclipse.jst.jee.server:day0510_2"/></Host>
+      <Context docBase="web-study-1" path="/web-study-1" reloadable="true" source="org.eclipse.jst.jee.server:web-study-1"/><Context docBase="web-study" path="/web-study" reloadable="true" source="org.eclipse.jst.jee.server:web-study"/><Context docBase="web-study-01" path="/web-study-01" reloadable="true" source="org.eclipse.jst.jee.server:web-study-01"/><Context docBase="web-study-2" path="/web-study-2" reloadable="true" source="org.eclipse.jst.jee.server:web-study-2"/><Context docBase="web-study-002" path="/web-study-002" reloadable="true" source="org.eclipse.jst.jee.server:web-study-002"/></Host>
+     
     </Engine>
   </Service>
 </Server>
