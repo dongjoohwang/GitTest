@@ -1,6 +1,6 @@
 package day0519.repeat;
 
-class Box<T> {
+class Box10<T> {
 	protected T ob;
 }
 

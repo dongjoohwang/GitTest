@@ -9,9 +9,10 @@
 </head>
 <body>
 	<form method="get" action="ParamServlet" name="frm">
-		아이디 : <input type = "text" name = "id"><br>
+		<label for="userid">아이디</label>
+		<input type = "text" name = "id" id="userid"><br>
 		나 &nbsp; 이 : <input type="text" name="age"><br>
-		<input type="submit" value="전송" onclick="">
+		<input type="submit" value="전송" onclick="return check()">
 	</form>
 </body>
 </html>
