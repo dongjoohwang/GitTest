@@ -35,7 +35,7 @@
 			</tr>
 			<tr>
 				<td class="td1">글 내용</td>
-				<td><textarea rows="10" cols="100" name="message"></textarea></td>
+				<td><textarea rows="10" cols="80" name="message"></textarea></td>
 			</tr>
 		</table>
 		<div class="bt">
