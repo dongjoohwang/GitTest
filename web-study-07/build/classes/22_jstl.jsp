@@ -8,7 +8,7 @@
 <title>Insert title here</title>
 </head>
 <body>
-	<c:set var="age" value="30" scope="page"></c:set>
+	<c:set var="age" value="30"></c:set>
 	나이 : <c:out value="${age}">10</c:out>	<br>
 	
 	<c:remove var="age" scope="page"/>
