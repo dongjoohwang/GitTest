@@ -128,16 +128,27 @@
 				<Context docBase="web-study-09" path="/web-study-09" reloadable="true" source="org.eclipse.jst.jee.server:web-study-09">
 					<Resource auth="Container" driverClassName="oracle.jdbc.OracleDriver" maxIdle="10" maxTotal="20" maxWaitMillis="-1" name="jdbc/myoracle" password="tiger" type="javax.sql.DataSource" url="jdbc:oracle:thin:@127.0.0.1:1521:XE" username="scott"/>
 				</Context>
-				
+
 				<Context docBase="web-study-quiz" path="/web-study-quiz" reloadable="true" source="org.eclipse.jst.jee.server:web-study-quiz">
 					<Resource auth="Container" driverClassName="oracle.jdbc.OracleDriver" maxIdle="10" maxTotal="20" maxWaitMillis="-1" name="jdbc/myoracle" password="tiger" type="javax.sql.DataSource" url="jdbc:oracle:thin:@127.0.0.1:1521:XE" username="scott"/>
 				</Context>
-			<Context docBase="BoardJspProject" path="/BoardJspProject" reloadable="true" source="org.eclipse.jst.jee.server:BoardJspProject"/>
-		
-			<Context docBase="exam_shopping" path="/exam_shopping" reloadable="true" source="org.eclipse.jst.jee.server:exam_shopping">
+				<Context docBase="BoardJspProject" path="/BoardJspProject" reloadable="true" source="org.eclipse.jst.jee.server:BoardJspProject"/>
+
+				<Context docBase="exam_shopping" path="/exam_shopping" reloadable="true" source="org.eclipse.jst.jee.server:exam_shopping">
 					<Resource auth="Container" driverClassName="oracle.jdbc.OracleDriver" maxIdle="10" maxTotal="20" maxWaitMillis="-1" name="jdbc/myoracle" password="tiger" type="javax.sql.DataSource" url="jdbc:oracle:thin:@127.0.0.1:1521:XE" username="scott"/>
-			</Context>	
-			<Context docBase="hrd정보처리산업기사" path="/hrd정보처리산업기사" reloadable="true" source="org.eclipse.jst.jee.server:hrd정보처리산업기사"/><Context docBase="shoppingmall" path="/shoppingmall" reloadable="true" source="org.eclipse.jst.jee.server:shoppingmall"/><Context docBase="JusoTest" path="/JusoTest" reloadable="true" source="org.eclipse.jst.jee.server:JusoTest"/></Host>
+				</Context>
+				<Context docBase="hrd정보처리산업기사" path="/hrd정보처리산업기사" reloadable="true" source="org.eclipse.jst.jee.server:hrd정보처리산업기사"/>
+				<Context docBase="shoppingmall" path="/shoppingmall" reloadable="true" source="org.eclipse.jst.jee.server:shoppingmall"/>
+				<Context docBase="JusoTest" path="/JusoTest" reloadable="true" source="org.eclipse.jst.jee.server:JusoTest"/>
+
+				<Context docBase="web-study-10" path="/web-study-10" reloadable="true" source="org.eclipse.jst.jee.server:web-study-10">
+					<Resource auth="Container" driverClassName="oracle.jdbc.OracleDriver" maxIdle="10" maxTotal="20" maxWaitMillis="-1" name="jdbc/myoracle" password="tiger" type="javax.sql.DataSource" url="jdbc:oracle:thin:@127.0.0.1:1521:xe" username="scott"/>
+				</Context>
+				
+				<Context docBase="web-study-100" path="/web-study-100" reloadable="true" source="org.eclipse.jst.jee.server:web-study-100">
+						<Resource auth="Container" driverClassName="oracle.jdbc.OracleDriver" maxIdle="10" maxTotal="20" maxWaitMillis="-1" name="jdbc/myoracle" password="tiger" type="javax.sql.DataSource" url="jdbc:oracle:thin:@127.0.0.1:1521:xe" username="scott"/>
+				</Context>
+			<Context docBase="주소검색" path="/" reloadable="true" source="org.eclipse.jst.jee.server:주소검색"/></Host>
 
 		</Engine>
 	</Service>
