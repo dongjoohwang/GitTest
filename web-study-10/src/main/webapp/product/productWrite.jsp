@@ -6,7 +6,7 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>Insert title here</title>
 <link rel="stylesheet" type="text/css" href="css/shopping.css">
-<script type="text/javascript" src="script/product.js"></script>
+<!-- <script type="text/javascript" src="script/product.js"></script> -->
 </head>
 <body>
 	<div id="wrap" align="center">
@@ -23,7 +23,7 @@
 				</tr>
 				<tr>
 					<th>사 진</th>
-					<td><input type="file" name="pictureUrl"><br>
+					<td><input type="file" name="pictureurl"><br>
 						(주의사항 : 이미지를 변경하고자 할때만 선택하시오)</td>
 				</tr>
 				<tr>
@@ -33,7 +33,7 @@
 			</table>	<br> 
 			<input type="submit" value="등록"  onclick="return productCheck()"> 
             <input type="reset"  value="다시작성"> 
-            <input type="button" value="목록" 	onclick="location.href='productList.do'">
+            <input type="button" value="목록" 	onclick="location.href='ProductList.do'">
 		</form>
 	</div>
 </body>
