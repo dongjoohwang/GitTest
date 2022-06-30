@@ -180,6 +180,7 @@
 		<item key="JarManifestWizardPage.MANIFEST_LOCATION" value=""/>
 		<item key="JarManifestWizardPage.SEAL_JAR" value="false"/>
 		<list key="JarPackageWizardPage.DESTINATION_NAMES_ID">
+			<item value="D:\servlet\buildTest.jar"/>
 			<item value="D:\servlet\calc.jar"/>
 		</list>
 	</section>

@@ -147,7 +147,7 @@
 			<Context docBase="web-study-11repeat" path="/web-study-11repeat" reloadable="true" source="org.eclipse.jst.jee.server:web-study-11repeat">
 					<Resource auth="Container" driverClassName="oracle.jdbc.OracleDriver" maxIdle="10" maxTotal="20" maxWaitMillis="-1" name="jdbc/myoracle" password="tiger" type="javax.sql.DataSource" url="jdbc:oracle:thin:@127.0.0.1:1521:xe" username="scott"/>
 			</Context>
-			<Context docBase="BoardWeb2" path="/biz" reloadable="true" source="org.eclipse.jst.jee.server:BoardWeb2"/></Host>
+			<Context docBase="BoardWeb2" path="/biz" reloadable="true" source="org.eclipse.jst.jee.server:BoardWeb2"/><Context docBase="BoardWeb" path="/BoardWeb" reloadable="true" source="org.eclipse.jst.jee.server:BoardWeb"/></Host>
 
 		</Engine>
 	</Service>
