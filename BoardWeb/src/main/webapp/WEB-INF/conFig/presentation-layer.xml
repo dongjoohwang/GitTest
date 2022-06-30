@@ -4,5 +4,17 @@
 	xsi:schemaLocation="http://www.springframework.org/schema/beans 
 	http://www.springframework.org/schema/beans/spring-beans.xsd">
 
+<bean class="org.springframework.web.servlet.handler.SimpleUrlHandlerMapping">
+	<property name="mappings">
+		<props>
+			<prop key="/login.do">login</prop>
+			<prop key="/getBoardsList.do">getBoardsList</prop>
+			<prop key="/getBoards.do">getBoards</prop>
+		</props>
+	</property>
+</bean>
 
+<bean id="login" class="com.springbook.view.user.LoginController"></bean>
+<bean id="getBoardsList" class="com.springbook.view.board.GetBoardListController"></bean>
+<bean id="getBoards" class="com.springbook.view.board.GetBoardController"></bean>
 </beans>
