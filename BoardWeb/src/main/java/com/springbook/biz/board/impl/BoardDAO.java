@@ -11,11 +11,16 @@ import org.springframework.stereotype.Repository;
 import com.springbook.biz.board.BoardVO;
 import com.springbook.biz.common.JDBCUtil;
 
-@Repository("boardDAO")
+@Repository
 public class BoardDAO {
 	private Connection conn = null;
 	private PreparedStatement stmt = null;
 	private ResultSet rs = null;
+	
+	private final String BOARDS_LIST_T = 
+			"select * from boards where title like '%'||?||'%' order by seq desc";
+	private final String BOARDS_LIST_C =
+			"select * from boards where content like '%'||?||'%' order by seq desc";
 	
 	private final String BOARDS_INSERT 
 	= "insert into boards(seq, title, writter, content) values((select nvl(max(seq), 0)+1 from boards),?,?,?)";
@@ -97,7 +102,12 @@ public class BoardDAO {
 		List<BoardVO> boardsList = new ArrayList<BoardVO>();
 		try {
 			conn = JDBCUtil.getConnection();
-			stmt = conn.prepareStatement(BOARDS_LIST);
+			if(vo.getSearchCondition().equals("TITLE")) {
+				stmt = conn.prepareStatement(BOARDS_LIST_T);
+			} else if (vo.getSearchCondition().equals("CONTENT")) {
+				stmt = conn.prepareStatement(BOARDS_LIST_C);
+			} 
+			stmt.setString(1, vo.getSearchKeyword());
 			rs = stmt.executeQuery();
 			while(rs.next()) {
 				BoardVO boards = new BoardVO();

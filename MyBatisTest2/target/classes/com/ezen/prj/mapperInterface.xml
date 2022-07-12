@@ -8,7 +8,7 @@
     select * from board where id = #{id}
   </select>
   
-  <select id="selectAllMember" resultType="com.ezen.prj.BoardVO">
+  <select id="insertBoards" parameterType="">
   	select * from board
   </select>
   

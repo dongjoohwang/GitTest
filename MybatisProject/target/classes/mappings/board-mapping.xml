@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+  
+  <mapper namespace="BoardDAO">
+  
+  <resultMap id="boardResult" type="boards">
+  	<id property="seq" column="SEQ"/>
+  	<result property="title" column="TITLE"/>
+  	<result property="writter" column="WRITTER"/>
+  	<result property="content" column="CONTENT"/>
+  	<result property="regDate" column="REGDATE"/>
+  	<result property="cnt" column="CNT"/>
+  </resultMap>
+  
+	<insert id="insertBoards" parameterType="boards">	
+		<![CDATA[
+			INSERT INTO BOARDS(SEQ, TITLE, WRITTER, CONTENT)
+			VALUES((SELECT NVL(MAX(SEQ), 0) + 1 FROM BOARDS),
+			#{title}, #{writter}, #{content})
+		]]>
+	</insert>
+	
+	<update id="updateBoards">
+		<![CDATA[
+			UPDATE BOARDS SET
+				TITLE = #{title},
+				CONTENT = #{content}
+			WHERE SEQ = #{seq}
+		]]>
+	</update>
+	
+	<delete id="deleteBoards">
+		<![CDATA[
+			DELETE BOARDS
+			WHERE SEQ = #{seq}
+		]]>
+	</delete>
+	
+  <select id="getBoards" resultType="boards">
+    	<![CDATA[
+			SELECT * FROM BOARDS
+			WHERE SEQ = #{seq}
+		]]>
+  </select>
+
+	<select id="getBoardsList" resultType="boards">
+		<![CDATA[
+			SELECT * FROM BOARDS
+			WHERE TITLE LIKE '%'||#{searchKeyword}||'%'
+			ORDER BY SEQ DESC
+		]]>
+	</select>
+
+  </mapper>

@@ -22,12 +22,7 @@ public class MainClass {
 				 
 			mapperInterface mapper = session.getMapper(mapperInterface.class);
 		    BoardVO vo = mapper.selectOne(1);
-		    System.out.println(vo.toString());
-		    System.out.println("------------");
-		    
-		    List<BoardVO> list = mapper.selectAllMember();
-		    for(BoardVO vo2 : list)
-		    	System.out.println(vo2.toString());
+		    System.out.println(vo.getName());
 		    
 		} catch (IOException e) {
 			e.printStackTrace();

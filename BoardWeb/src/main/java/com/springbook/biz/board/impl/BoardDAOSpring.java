@@ -4,21 +4,23 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.List;
 
-import javax.sql.DataSource;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.core.RowMapper;
-import org.springframework.jdbc.core.support.JdbcDaoSupport;
 import org.springframework.stereotype.Repository;
 
 import com.springbook.biz.board.BoardVO;
 
 @Repository
-public class BoardDAOSpring extends JdbcDaoSupport {
+public class BoardDAOSpring {
 
 	@Autowired
 	private JdbcTemplate jdbcTemplate;
+	
+	private final String BOARDS_LIST_T = 
+			"select * from boards where title like '%'||?||'%' order by seq desc";
+	private final String BOARDS_LIST_C =
+			"select * from boards where content like '%'||?||'%' order by seq desc";
 	
 	private final String BOARDS_INSERT 
 	= "insert into boards(seq, title, writter, content) values((select nvl(max(seq), 0)+1 from boards),?,?,?)";
@@ -26,11 +28,6 @@ public class BoardDAOSpring extends JdbcDaoSupport {
 	private final String BOARDS_DELETE = "delete boards where seq=?";
 	private final String BOARDS_GET = "select * from boards where seq=?";
 	private final String BOARDS_LIST = "select * from boards order by seq desc";
-	
-	@Autowired
-	public void setSuperDataSource(DataSource datasource) {
-		super.setDataSource(datasource);
-	}
 	
 	public void insertBoards(BoardVO vo) {
 		System.out.println("---> Spring JDBC로 insertBoards() 기능 처리");
@@ -54,8 +51,14 @@ public class BoardDAOSpring extends JdbcDaoSupport {
 	}
 	
 	public List<BoardVO> getBoardsList(BoardVO vo) {
-		System.out.println("---> Spring JDBC로 deleteBoards() 기능 처리");
-		return jdbcTemplate.query(BOARDS_LIST, new BoardRowMapper());
+		System.out.println("---> Spring JDBC로 getBoardsList() 기능 처리");
+		Object[] args = {vo.getSearchKeyword()};
+		if(vo.getSearchCondition().equals("TITLE")) {
+			return jdbcTemplate.query(BOARDS_LIST_T, args, new BoardRowMapper());
+		} else if (vo.getSearchCondition().equals("CONTENT")) {
+			return jdbcTemplate.query(BOARDS_LIST_C, args, new BoardRowMapper());			
+		}
+		return null;
 	}
 	
 	class BoardRowMapper implements RowMapper<BoardVO> {
