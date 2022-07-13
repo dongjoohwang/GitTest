@@ -22,6 +22,7 @@ public class BoardMapperTests {
 		
 		for(BoardVO vo : mapper.getList()) {
 			log.info(vo);
+		
 		}
 	}
 	
@@ -59,9 +60,9 @@ public class BoardMapperTests {
 		
 		BoardVO vo = new BoardVO();
 		vo.setBno(8L);
-		vo.setTitle("오라클");
-		vo.setContent("오라클");
-		vo.setWriter("오라클");
+		vo.setTitle("오라클2");
+		vo.setContent("오라클2");
+		vo.setWriter("오라클2");
 		log.info("update : " + mapper.update(vo));
 	}
 }
