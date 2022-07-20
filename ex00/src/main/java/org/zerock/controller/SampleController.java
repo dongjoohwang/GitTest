@@ -15,6 +15,13 @@ import lombok.extern.log4j.Log4j;
 @RequestMapping("/sample/*")
 @Log4j
 public class SampleController {
+//	
+//	@GetMapping("/basic")
+//	public String basic(SampleDTO dto, Model model) {
+//		log.info("dto------- : " + dto);
+//		model.addAttribute("list", dto);
+//		return "basic";
+//	}
 	
 	@RequestMapping(value="basic", method = RequestMethod.GET)
 	public String basic() {
@@ -62,13 +69,6 @@ public class SampleController {
 		return dto;
 	}
 }
-
-
-
-
-
-
-
 
 
 

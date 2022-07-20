@@ -8,5 +8,9 @@
 </head>
 <body>
 	<h1>basic!!!</h1>
+	<h3>${list}</h3>
+	<h3>${list.name}</h3>
+	<h3>${sampleDTO}</h3>
+	<h3>${sampleDTO.name}</h3>
 </body>
 </html>

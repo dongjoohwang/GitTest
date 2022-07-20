@@ -75,10 +75,20 @@ public class BoardControllerTests {
 		= mockMvc.perform(MockMvcRequestBuilders.post("/board/modify")
 				.param("bno", "13")
 				.param("title", "java")
-				.param("content", "자바의 정석")
+				.param("content", "자바의 정석 2판")
 				.param("writer", "남궁성")
 				).andReturn().getModelAndView().getViewName();
 		log.info(resultPage);
+	}
+	
+	@Test
+	public void testListPaging() throws Exception {
+		log.info(
+			mockMvc.perform(
+				MockMvcRequestBuilders.get("/board/list")
+				.param("pageNum", "5")
+				.param("amount", "30"))
+			.andReturn().getModelAndView().getModelMap());		
 	}
 }
 

@@ -12,6 +12,8 @@
 	<item key="TypeHierarchyViewPart.linkeditors" value="false"/>
 	<item key="TypeHierarchyViewPart.orientation" value="3"/>
 	<section name="completion_proposal_size">
+		<item key="size.x" value="552"/>
+		<item key="size.y" value="377"/>
 	</section>
 	<section name="quick_assist_proposal_size">
 	</section>
