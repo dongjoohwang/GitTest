@@ -1,7 +1,5 @@
 package org.zerock.service;
 
-import static org.junit.Assert.assertNotNull;
-
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -9,6 +7,7 @@ import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 import org.zerock.domain.BoardVO;
 import org.zerock.domain.Criteria;
+import org.zerock.mapper.BoardMapperTests;
 
 import lombok.extern.log4j.Log4j;
 
@@ -21,63 +20,46 @@ public class BoardServiceTests {
 	private BoardService service;
 	
 	@Test
-	public void testExist() {
-		log.info(service);
-		assertNotNull(service);
-	}
-	
-	@Test
 	public void testRegister() {
-		BoardVO vo = new BoardVO();
-		vo.setTitle("새로 작성");
-		vo.setContent("하는 내용");
-		vo.setWriter("new");
+		BoardVO vo  = new BoardVO();
+		vo.setTitle("삼국지");
+		vo.setContent("영웅호걸전..........");
+		vo.setWriter("황석영");
+		
 		service.register(vo);
-		log.info("생성된 개시물 번호 : " + vo.getBno());
+		log.info("생성된 게시물 번호 : " + vo.getBno());
 	}
-	
+	@Test
+	public void testRead() {
+		service.get(24L);
+		//log.info("검색된 데이타  : " + 	service.get(24L));
+	}
+	@Test
+	public void testDelete() {
+		//service.remove(24L);
+		log.info("삭제된 개수  : " + 	service.remove(7L));
+	}
+
+	@Test
+	public void testGetList() {
+		log.info("----------------------------");
+		service.getList(new Criteria(2,10));
+	}
+
 	@Test
 	public void testModify() {
 		BoardVO vo = new BoardVO();
-		vo.setBno(12L);
-		vo.setTitle("새로");
-		vo.setContent("작성");
-		vo.setWriter("new");
-		log.info("modify--------------");
-		log.info("수정 : " + service.modify(vo)); 
+		vo.setBno(21L);
+		vo.setTitle("홍길동");
+		vo.setContent("도둑이야기...........");
+		vo.setWriter("허균");
+		service.modify(vo);
+		log.info("수정된 데이타 : " + service.modify(vo));
 	}
 	
-	@Test
-	public void testRemove() {
-		
-		log.info("remove--------------");
-		log.info("삭제 : " + service.remove(9L));
-	}
 	
-	@Test
-	public void testGet() {
-		
-		log.info("read--------------");
-		log.info("불러오기 : " + service.get(3L));
-	}
-	@Test
-	public void testGetList(Criteria cri) {
-		
-		for(BoardVO vo : service.getList(cri)) {
-			log.info(vo);
-		}
-	}
+	
+	
 	
 	
 }
-
-
-
-
-
-
-
-
-
-
-

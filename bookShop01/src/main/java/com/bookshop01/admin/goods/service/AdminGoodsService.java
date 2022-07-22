@@ -11,16 +11,17 @@ import com.bookshop01.goods.vo.GoodsVO;
 import com.bookshop01.goods.vo.ImageFileVO;
 import com.bookshop01.order.vo.OrderVO;
 
+// 상품(책)
 public interface AdminGoodsService {
-	public int  addNewGoods(Map newGoodsMap) throws Exception;
-	public List<GoodsVO> listNewGoods(Map condMap) throws Exception;
-	public Map goodsDetail(int goods_id) throws Exception;
-	public List goodsImageFile(int goods_id) throws Exception;
-	public void modifyGoodsInfo(Map goodsMap) throws Exception;
-	public void modifyGoodsImage(List<ImageFileVO> imageFileList) throws Exception;
-	public List<OrderVO> listOrderGoods(Map condMap) throws Exception;
-	public void modifyOrderGoods(Map orderMap) throws Exception;
-	public void removeGoodsImage(int image_id) throws Exception;
-	public void addNewGoodsImage(List imageFileList) throws Exception;
+	public int  addNewGoods(Map newGoodsMap) throws Exception;			// 상품 추가
+	public List<GoodsVO> listNewGoods(Map condMap) throws Exception;	// 상품 추가 목록
+	public Map goodsDetail(int goods_id) throws Exception;				// 상품 상세 정보
+	public List goodsImageFile(int goods_id) throws Exception;			// 상품 이미지 출력
+	public void modifyGoodsInfo(Map goodsMap) throws Exception;			// 상품 수정
+	public void modifyGoodsImage(List<ImageFileVO> imageFileList) throws Exception;		// 상품 이미지 수정
+	public List<OrderVO> listOrderGoods(Map condMap) throws Exception;		// 주문한 상품 목록
+	public void modifyOrderGoods(Map orderMap) throws Exception;			// 상품 주문 수정
+	public void removeGoodsImage(int image_id) throws Exception;			// 상품 삭제
+	public void addNewGoodsImage(List imageFileList) throws Exception;		// 상품 이미지 추가
 	
 }

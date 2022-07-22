@@ -13,5 +13,6 @@ public interface BoardService {
 	public BoardVO get(Long bno);		// 읽기
 //	public List<BoardVO> getList();		// 전체 읽기
 	public List<BoardVO> getList(Criteria cri);
-	public int getTotal(Criteria cri);
+	// 7/20
+	public int getTotal(Criteria cri);		
 }

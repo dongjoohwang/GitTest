@@ -2,6 +2,7 @@ package org.zerock.service;
 
 import java.util.List;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.zerock.domain.BoardVO;
 import org.zerock.domain.Criteria;
@@ -13,37 +14,33 @@ import lombok.extern.log4j.Log4j;
 @Service
 @Log4j
 @AllArgsConstructor
-public class BoardServiceImpl implements BoardService {
-
-	private BoardMapper mapper;
+public class BoardServiceImpl implements BoardService{
 	
-	@Override
+	private BoardMapper mapper;
+
 	public void register(BoardVO vo) {
-		log.info("register--------- " + vo);
+		log.info("register...............................................");
+		//	mapper.insert(vo);
 		mapper.insertSelectKey(vo);
 	}
 
 	@Override
+	public BoardVO get(Long bno) {
+		return mapper.read(bno);
+	}
+
+	@Override
 	public int modify(BoardVO vo) {
-		log.info("modify--------- " + vo);
 		return mapper.update(vo);
 	}
 
 	@Override
 	public int remove(Long bno) {
-		log.info("remove--------- " + bno);
 		return mapper.delete(bno);
 	}
 
 	@Override
-	public BoardVO get(Long bno) {
-		log.info("get-------------");
-		return mapper.read(bno);
-	}
-
-	@Override
 	public List<BoardVO> getList(Criteria cri) {
-		log.info("getList--------- ");
 		return mapper.getListWithPagging(cri);
 	}
 
@@ -52,22 +49,5 @@ public class BoardServiceImpl implements BoardService {
 		log.info("get total count");
 		return mapper.getTotalCount(cri);
 	}
-//
-//	@Override
-//	public List<BoardVO> getList() {
-//		return null;
-//	}
-
-	
 	
 }
-
-
-
-
-
-
-
-
-
-

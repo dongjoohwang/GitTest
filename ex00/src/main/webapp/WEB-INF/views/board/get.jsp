@@ -41,10 +41,14 @@
 						    <button data-oper='modify' class="btn btn-default">Modify</button>
 						    <button data-oper='list'  class="btn btn-info" >List</button>
 						    
+						    <!-- 7/20 -->
 						    <form id='operForm'  action = "/board/modify" method="get">
 						    	<input type="hidden"  id="bno"  name="bno"  value='<c:out value="${board.bno }"/>' >
+						    			<!-- Criteria 클래스의 인스턴스 명과 일치 => 자동 바인딩 -->
 						  		<input type="hidden" name="pageNum" value='<c:out value="${cri.pageNum}"/>'>
 						    	<input type="hidden" name="amount" value='<c:out value="${cri.amount}"/>'>
+						    	<input type="hidden" name="type" value='<c:out value="${cri.type}"/>'>
+						    	<input type="hidden" name="keyword" value='<c:out value="${cri.keyword}"/>'>
 						    </form>
 						   
                         </div>
@@ -62,7 +66,7 @@
   		$("button[data-oper='modify']").on("click", function(e){
   			operForm.attr("action", "/board/modify").submit();
   		});
-  		$("button[data-oper='list']").on("click", function(e){
+  		$("button[data-oper='list']").on("click", function(e){	// button[data-oper=' list']	=> 띄어쓰기도 에러로 인식
   			operForm.find("#bno").remove();
   			operForm.attr("action", "/board/list").submit();
   		});

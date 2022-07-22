@@ -20,10 +20,13 @@
                         </div>
                         <!-- /.panel-heading -->
                         <div class="panel-body">
-                        
+                        	<!-- 7/20 -->
                         	<form role="form"  action="/board/modify"  method="post">
+                        		<!-- Criteria 클래스의 인스턴스 명과 일치 => 자동 바인딩 -->
                         		<input type="hidden" name="pageNum" value='<c:out value="${cri.pageNum}"/>'>
 						    	<input type="hidden" name="amount" value='<c:out value="${cri.amount}"/>'>
+						    	<input type="hidden" name="type" value='<c:out value="${cri.type}"/>'>
+						    	<input type="hidden" name="keyword" value='<c:out value="${cri.keyword}"/>'>
 								<div class="from-group">
 									<label>Bno</label>
 									<input class="form-control"  name="bno"  readonly="readonly"  value='<c:out value="${board.bno}"/>' ><br>
@@ -82,6 +85,7 @@
  				var operation = $(this).data('oper');
  				console.log(operation);
  				
+ 				// 7/20
  				if(operation === 'remove'){
  					formObj.attr("action", "/board/remove");
  				}else if(operation === 'list'){
@@ -89,9 +93,13 @@
  				formObj.attr("action", "/board/list").attr("method","get");
  				var pageNumTag = $("input[name='pageNum']").clone();
  				var amountTag = $("input[name='amount']").clone();
+ 				var typeTag = $("input[name='type']").clone();
+ 				var keywordTag = $("input[name='keyword']").clone();
  				formObj.empty();
  				formObj.append(pageNumTag);
  				formObj.append(amountTag);
+ 				formObj.append(typeTag);
+ 				formObj.append(keywordTag);
  				}
  				formObj.submit();
  			});
