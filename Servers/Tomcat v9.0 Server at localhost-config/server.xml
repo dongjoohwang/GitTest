@@ -139,7 +139,7 @@
 
 				
 			
-			<Context docBase="ex00" path="/" reloadable="true" source="org.eclipse.jst.jee.server:ex00"/><Context docBase="bookShop01" path="/bookshop01" reloadable="true" source="org.eclipse.jst.jee.server:bookShop01"/><Context docBase="병원 홈페이지" path="/hospital" reloadable="true" source="org.eclipse.jst.jee.server:병원 홈페이지"/></Host>
+			<Context docBase="Hospital_Page" path="/" reloadable="true" source="org.eclipse.jst.jee.server:Hospital_Page"/></Host>
 
 		</Engine>
 	</Service>

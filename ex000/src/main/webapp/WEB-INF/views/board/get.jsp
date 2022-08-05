@@ -7,7 +7,7 @@
 
             <div class="row">
                 <div class="col-lg-12">
-                    <h1 class="page-header">Tables</h1>
+                    <h1 class="page-header">병원 목록</h1>
                 </div>
                 <!-- /.col-lg-12 -->
             </div>
@@ -16,30 +16,53 @@
                 <div class="col-lg-12">
                     <div class="panel panel-default">
                         <div class="panel-heading">
-                           Board Read Page
+                           병원 상세 정보
                         </div>
                         <!-- /.panel-heading -->
                         <div class="panel-body">
 							<div class="from-group">
-								<label>Bno</label>
+								<label>번호</label>
 								<input class="form-control"  name="bno"  readonly="readonly"  value='<c:out value="${board.bno}"/>' ><br>
 							</div>
 							<div class="from-group">
-								<label>Title</label>
-								<input class="form-control"  name="title"  readonly="readonly" value='<c:out value="${board.title}"/>' ><br>
+								<label>병원 이름</label>
+								<input class="form-control"  name="hosname"  readonly="readonly" value='<c:out value="${board.hosname}"/>' ><br>
 							</div>
 							<div class="from-group">
-								<label>Text area</label>
-								<textarea class="form-control"   rows="3"  name="content"  readonly="readonly">
-								<c:out value="${board.content}"/></textarea><br>
+								<label>주소 </label>
+								<input class="form-control"  name="address"  readonly="readonly" value='<c:out value="${board.address}"/>' ><br>
 							</div>
 							<div class="from-group">
-								<label>Writer</label>
-								<input class="form-control"  name="writer"  readonly="readonly" value='<c:out value="${board.writer}"/>' ><br>
+								<label>전화번호 </label>
+								<input class="form-control"  name="phone"  readonly="readonly" value='<c:out value="${board.phone}"/>' ><br>
 							</div>
-						    
-						    <button data-oper='modify' class="btn btn-default">Modify</button>
-						    <button data-oper='list'  class="btn btn-info" >List</button>
+							<div class="from-group">
+								<label>진료과목 </label>
+								<input class="form-control"  name="subject"  readonly="readonly" value='<c:out value="${board.subject}"/>' ><br>
+							</div>
+							<div class="from-group">
+								<label>진료일 </label>
+								<input class="form-control"  name="workday"  readonly="readonly" value='<c:out value="${board.workday}"/>' ><br>
+							</div>
+							<div class="from-group">
+								<label>진료 시간(시작) </label>
+								<input class="form-control"  name="opentime"  readonly="readonly" value='<c:out value="${board.opentime}"/>' ><br>
+							</div>
+							<div class="from-group">
+								<label>진료 시간(마감) </label>
+								<input class="form-control"  name="closetime"  readonly="readonly" value='<c:out value="${board.closetime}"/>' ><br>
+							</div>
+							<div class="from-group">
+								<label>휴무 </label>
+								<input class="form-control"  name="holiday"  readonly="readonly" value='<c:out value="${board.holiday}"/>' ><br>
+							</div>
+							<div class="from-group">
+								<label>휴진 안내 </label>
+								<input class="form-control"  name="holisubject"  readonly="readonly" value='<c:out value="${board.holisubject}"/>' ><br>
+							</div>
+				
+						    <button data-oper='list'  class="btn btn-info" >목록으로 돌아가기</button>
+						    <button data-oper='list'  class="btn btn-info" >길찾기</button>
 						    
 						    <!-- 7/20 -->
 						    <form id='operForm'  action = "/board/modify" method="get">
@@ -67,7 +90,7 @@
   			operForm.attr("action", "/board/modify").submit();
   		});
   		$("button[data-oper='list']").on("click", function(e){	// button[data-oper=' list']	=> 띄어쓰기도 에러로 인식
-  			operForm.find("#bno").remove();
+  			operForm.find("bno").remove();
   			operForm.attr("action", "/board/list").submit();
   		});
   		

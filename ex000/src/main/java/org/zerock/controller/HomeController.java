@@ -36,4 +36,44 @@ public class HomeController {
 		return "home";
 	}
 	
+	@RequestMapping("/login")
+	public String login() {
+		
+		return "login";
+	}
+	
+	@RequestMapping("/agree")
+	public String agree() {
+		
+		return "agree";
+	}
+
+	@RequestMapping("/main")
+	public String main() {
+		
+		return "main";
+	}
+	@RequestMapping("/join")
+	public String join() {
+		
+		return "join";
+	}
+	@RequestMapping("/self-diagnosis")
+	public String selfdiagnosis() {
+		
+		return "self-diagnosis";
+	}
+	
 }
+
+
+
+
+
+
+
+
+
+
+
+

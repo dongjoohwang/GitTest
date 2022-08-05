@@ -14,8 +14,10 @@ UPDATEDATE          DATE
  */
 @Data
 public class BoardVO {
+	private String hosname, address, phone, 
+	subject, workday, opentime, closetime, 
+	holiday, holisubject, location;
 	private Long bno;
-	private String title, content, writer;
 	private Date regdate, updatedate;
 }
 

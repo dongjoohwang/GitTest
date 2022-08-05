@@ -12,7 +12,7 @@
 	<bean id="hikariConfig" class="com.zaxxer.hikari.HikariConfig">
 		<property name="driverClassName" value="net.sf.log4jdbc.sql.jdbcapi.DriverSpy"></property>	
 		<property name="jdbcUrl" value="jdbc:log4jdbc:oracle:thin:@localhost:1521:xe"></property>
-		<property name="username" value="book"></property>
+		<property name="username" value="system"></property>
 		<property name="password" value="1234"></property>
 	</bean>
 		
@@ -27,6 +27,7 @@
 	<mybatis-spring:scan base-package="org.zerock.mapper"/>
 	
 	<context:component-scan base-package="org.zerock.service"></context:component-scan>
+	
 </beans>
 
 

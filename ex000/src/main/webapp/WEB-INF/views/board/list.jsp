@@ -7,7 +7,7 @@
 
 <div class="row">
 	<div class="col-lg-12">
-		<h1 class="page-header">Tables</h1>
+		<h1 class="page-header">병원 목록</h1>
 	</div>
 	<!-- /.col-lg-12 -->
 </div>
@@ -15,20 +15,16 @@
 <div class="row">
 	<div class="col-lg-12">
 		<div class="panel panel-default">
-			<div class="panel-heading">Board Rigister
-				<button id="regBtn"  type="button" class="btn btn-xs pull-right">Register New Board</button>
-			</div>
 			<!-- /.panel-heading -->
 			<div class="panel-body">
 				<table width="100%"
 					class="table table-striped table-bordered table-hover">
 					<thead>
 						<tr>
-							<th>#번호</th>
-							<th>제목</th>
-							<th>작성자</th>
-							<th>작성일</th>
-							<th>변경일</th>
+							<th>번호</th>
+							<th>병원</th>
+							<th>길찾기</th>
+							<th>전화번호</th>
 						</tr>
 					</thead>
 					<c:forEach items="${list }" var="board">
@@ -42,14 +38,17 @@
 							
 							<td>
 								<a class='move' href=<c:out value="${board.bno}"/>>
-								<c:out value="${board.title}"/></a>
+								<c:out value="${board.hosname}"/></a>
 							</td>
 							
-							<td><c:out value="${board.writer }" /></td>
-							<td><fmt:formatDate pattern="yyyy-MM-dd"
-									value="${board.regdate }" /></td>
-							<td><fmt:formatDate pattern="yyyy-MM-dd"
-									value="${board.updatedate }" /></td>
+							<td>
+								<a class='move' href=<c:out value="${board.location}"/>>
+								<c:out value="${board.location }" /></a>
+							</td>
+							
+							<td>
+								<c:out value="${board.phone }" />
+							</td>
 						</tr>
 					</c:forEach>
 				</table>
@@ -59,12 +58,9 @@
 				<form id="searchForm" action="/board/list" method="get">
 					<select name='type'>
 						<option value="" <c:out value="${pageMaker.cri.type==null ? 'selected' : ''}"/> ></option>
-						<option value="T" <c:out value="${pageMaker.cri.type eq 'T' ? 'selected' : ''}"/>>제목</option>
-						<option value="C" <c:out value="${pageMaker.cri.type eq 'C' ? 'selected' : ''}"/>>내용</option>
-						<option value="W" <c:out value="${pageMaker.cri.type eq 'W' ? 'selected' : ''}"/>>작성자</option>
-						<option value="TC" <c:out value="${pageMaker.cri.type eq 'TC' ? 'selected' : ''}"/>>제목+내용</option>
-						<option value="TW" <c:out value="${pageMaker.cri.type eq 'TW' ? 'selected' : ''}"/>>제목+작성자</option>
-						<option value="TCW" <c:out value="${pageMaker.cri.type eq 'TCW' ? 'selected' : ''}"/>>제목+내용+작성자</option>
+						<option value="H" <c:out value="${pageMaker.cri.type eq 'H' ? 'selected' : ''}"/>>병원</option>
+						<option value="A" <c:out value="${pageMaker.cri.type eq 'A' ? 'selected' : ''}"/>>주소</option>
+						<option value="S" <c:out value="${pageMaker.cri.type eq 'S' ? 'selected' : ''}"/>>과목</option>
 					</select>
 					
 					<input type="text" name="keyword"/>
@@ -118,7 +114,7 @@
 				<!-- /.table-responsive -->
 				<!--Modal 창 추가 -->
 				
-				<div id="myModal" class="modal" tabindex="-1" role="dialog">
+				 <div id="myModal" class="modal" tabindex="-1" role="dialog">
 					<div class="modal-dialog" role="document">
 						<div class="modal-content">
 							<div class="modal-header">
@@ -139,7 +135,7 @@
 							</div>
 						</div>
 					</div>
-				</div>
+				</div> 
 				<!--Modal 창 닫기 -->
 
 
@@ -152,6 +148,7 @@
 	<!-- /.col-lg-12 -->
 </div>
 <!-- /.row -->
+
 <script>
 	$(document).ready(function() {
 		var result = '<c:out value="${result}"/>';

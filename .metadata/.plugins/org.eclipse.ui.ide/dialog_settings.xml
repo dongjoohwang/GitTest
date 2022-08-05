@@ -146,6 +146,11 @@
 		<item key="WizardProjectsImportPage.STORE_CLOSE_CREATED_PROJECTS_ID" value="false"/>
 		<item key="WizardProjectsImportPage.STORE_HIDE_CONFLICTING_PROJECTS_ID" value="false"/>
 		<list key="WizardProjectsImportPage.STORE_DIRECTORIES">
+			<item value="C:\Users\user\Desktop\Ezen01-master\ex02"/>
+			<item value="D:\servlet\workspace\First_Project"/>
+			<item value="D:\Ezen01-master\ex00"/>
+			<item value="D:\Ezen01-master\ex22"/>
+			<item value="D:\Ezen01-master\ex02"/>
 			<item value="D:\servlet\workspace\bookShop01"/>
 			<item value="D:\servlet\workspace"/>
 		</list>

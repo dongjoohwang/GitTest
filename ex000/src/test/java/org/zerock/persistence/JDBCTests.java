@@ -22,7 +22,7 @@ public class JDBCTests {
 	public void testConnection() {
 		try(Connection conn = DriverManager.getConnection(
 				"jdbc:oracle:thin:@localhost:1521:xe",
-				"book",
+				"system",
 				"1234")) {
 			log.info("-------------");
 			log.info(conn);

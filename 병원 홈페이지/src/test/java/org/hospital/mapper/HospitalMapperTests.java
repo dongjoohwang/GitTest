@@ -112,7 +112,7 @@ public class HospitalMapperTests {
 		log.info(list);
 	}
 	@Test
-	public void testPageDTO() {
+	public void testPageDAO() {
 		HospitalCriterial hc = new HospitalCriterial();
 		hc.setPageNum(1);
 		hc.setAmount(5);
