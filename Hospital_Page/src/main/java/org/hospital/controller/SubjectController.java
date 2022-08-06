@@ -23,16 +23,6 @@ public class SubjectController {
 
 	private SubjectService service;
 	
-	@GetMapping("/hospitalMain.do")
-	public void hospitalMain() {
-		log.info("-----hospitalMain-----");
-	}
-	
-	@GetMapping("/self-diagnosis.do")
-	public void selfdiagnosis() {
-		log.info("-----self-diagnosis-----");
-	}
-	
 	@GetMapping("/list")
 	public void list(Criteria cri, Model model) {
 		log.info("cri+ " + cri);
