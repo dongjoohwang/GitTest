@@ -146,6 +146,10 @@
 		<item key="WizardProjectsImportPage.STORE_CLOSE_CREATED_PROJECTS_ID" value="false"/>
 		<item key="WizardProjectsImportPage.STORE_HIDE_CONFLICTING_PROJECTS_ID" value="false"/>
 		<list key="WizardProjectsImportPage.STORE_DIRECTORIES">
+			<item value="C:\Users\user\Desktop\gitTest-main\Hospital_Page"/>
+			<item value="C:\Users\user\Desktop\images\hospital_project"/>
+			<item value="C:\Users\user\Desktop\hospital_project\Hospital_Page"/>
+			<item value="D:\servlet\hospital_project-park\Hospital_Page"/>
 			<item value="C:\Users\user\Desktop\Ezen01-master\ex02"/>
 			<item value="D:\servlet\workspace\First_Project"/>
 			<item value="D:\Ezen01-master\ex00"/>
