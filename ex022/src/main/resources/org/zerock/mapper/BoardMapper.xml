@@ -59,10 +59,10 @@
   
   <select id="getListWithPagging"  resultType="org.zerock.domain.BoardVO">
   		<![CDATA[
-  			 select  bno, title, content, writer, regdate, updatedate
+  			 select  bno, title, content, writer, regdate, updatedate, replyCnt
 		 	from(
 	    			select /*+ index_desc(tbl_board pk_board) */ 
-	    			rownum rn, bno, title, content, writer, regdate, updatedate
+	    			rownum rn, bno, title, content, writer, regdate, updatedate, replyCnt
 	    			from tbl_board 
 	    	where
 		 ]]>
@@ -114,5 +114,8 @@
   <!-- /*+ index_desc(tbl_board pk_board) */ --> 
   </select>  
   
-  
+  <update id="updateReplyCnt">
+  		update tbl_board set replyCnt = replyCnt + #{amount} where bno = #{bno}
+  	</update>
+	
 </mapper>
