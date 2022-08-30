@@ -140,10 +140,17 @@
 				
 			
 			
-			<Context docBase="ex00" path="/" reloadable="true" source="org.eclipse.jst.jee.server:ex00">
 			
-			</Context>
-			</Host>
+			<Context docBase="web-study-11" path="/web-study-11" reloadable="true" source="org.eclipse.jst.jee.server:web-study-11">
+				<Resource
+	       name="jdbc/myoracle"
+	       auth="Container"
+	       type="javax.sql.DataSource"
+	       driverClassName="oracle.jdbc.driver.OracleDriver"
+	       username="scott"
+	       password="tiger"
+	       url="jdbc:oracle:thin:@localhost:1521:xe"/>
+			</Context></Host>
 
 		</Engine>
 	</Service>
