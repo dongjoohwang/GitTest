@@ -139,7 +139,11 @@
 
 				
 			
-			<Context docBase="Interior" path="/" reloadable="true" source="org.eclipse.jst.jee.server:Interior"/></Host>
+			
+			<Context docBase="ex00" path="/" reloadable="true" source="org.eclipse.jst.jee.server:ex00">
+			
+			</Context>
+			</Host>
 
 		</Engine>
 	</Service>
