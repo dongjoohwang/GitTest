@@ -1,7 +1,6 @@
 package util;
 
 import java.sql.Connection;
-import java.sql.DriverManager;
 import java.sql.ResultSet;
 import java.sql.Statement;
 
@@ -10,8 +9,7 @@ import javax.naming.InitialContext;
 import javax.sql.DataSource;
 
 public class DBManager {
-
-	public static Connection getConnetion() {
+	public static Connection getConnection() {
 		Connection conn = null;
 		try {
 			Context initContext = new InitialContext();
@@ -25,36 +23,25 @@ public class DBManager {
 		}
 		return conn;
 	}
-	
+
+	// select을 수행한 후 리소스 해제를 위한 메소드
 	public static void closeConnection(Connection conn, Statement stmt, ResultSet rs) {
 		try {
-			if(rs!=null) rs.close();
-			if(stmt!=null) stmt.close();
-			if(conn!=null) conn.close();
+			if(rs != null)  rs.close();
+			if(stmt != null) stmt.close();
+			if(conn != null) conn.close();
 		} catch (Exception e) {
 			e.printStackTrace();
-		} 
+		}
 	}
-	
+
+	// insert, update, delete 작업을 수행한 후 리소스 해제를 위한 메소드
 	public static void closeConnection(Connection conn, Statement stmt) {
 		try {
-			if(stmt!=null) stmt.close();
-			if(conn!=null) conn.close();
+			if(stmt != null) stmt.close();
+			if(conn != null) conn.close();
 		} catch (Exception e) {
 			e.printStackTrace();
-		} 
+		}
 	}
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
